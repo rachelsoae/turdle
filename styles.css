@@ -1,3 +1,6 @@
+/* add hover states to letters, inputs, buttons*/
+/* increase size of click boxes on letters */
+
 /*
 COLORS
   teal: #7ACFCA
@@ -203,6 +206,7 @@ h3 {
 }
 
 /* HIDDEN ELEMENTS */
+/* maybe update the names of these */
 .hidden {
   visibility: hidden;
 }
