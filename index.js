@@ -25,7 +25,11 @@ var gameOverGuessCount = document.querySelector('#game-over-guesses-count');
 var gameOverGuessGrammar = document.querySelector('#game-over-guesses-plural');
 
 // Event Listeners
-window.addEventListener('load', setGame);
+window.addEventListener('load', () => {
+  fetch('http://localhost:3001/api/v1/words')
+    .then(response => response.json())
+    .then(response => console.log(response))
+});
 
 // pass event through
 // can this be done with an iterator?
