@@ -7,6 +7,8 @@ var winningWord = '';
 var currentRow = 1;
 var guess = '';
 var gamesPlayed = [];
+const words = fetch('http://localhost:3001/api/v1/words')
+.then(response => response.json())
 
 // Query Selectors
 var inputs = document.querySelectorAll('input');
@@ -26,9 +28,7 @@ var gameOverGuessGrammar = document.querySelector('#game-over-guesses-plural');
 
 // Event Listeners
 window.addEventListener('load', () => {
-  fetch('http://localhost:3001/api/v1/words')
-    .then(response => response.json())
-    .then(response => console.log(response))
+  setGame();
 });
 
 // pass event through
